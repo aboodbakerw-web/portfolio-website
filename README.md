@@ -35,7 +35,7 @@ This portfolio showcases my frontend development skills, projects, and experienc
 **Abdullah Baker**
 
 - GitHub: https://github.com/aboodbakerw-web
-- LinkedIn: https://www.linkedin.com/in/ضع-رابط-لينكدإن-هنا
+- LinkedIn: https://www.linkedin.com/in/www.linkedin.com/in/abdullah-baker-zourob-608396395
 
 ---
 
