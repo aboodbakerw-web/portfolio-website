@@ -18,13 +18,11 @@ export const Sidebar = () => {
 
   const renderLinks = (isMobile = false) =>
     links.map((link) => (
-     <NavLink
+   <NavLink
   key={link.to}
   to={link.to}
   end={link.to === "/"}
-  className={({ isActive }) =>
-    `nav-link text-uppercase ${isActive ? "active" : ""}`
-  }
+  className="nav-link text-uppercase"
   onClick={isMobile ? closeMobileSidebar : undefined}
 >
   {link.text}
