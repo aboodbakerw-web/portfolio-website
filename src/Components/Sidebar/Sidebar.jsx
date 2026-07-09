@@ -3,8 +3,33 @@ import profileImg from "../../assets/images/SideberImg.jpg";
 import { NavLink } from "react-router-dom";
 
 export const Sidebar = () => {
-  const sidebarContent = (
-    <aside className="vh-100 text-center py-5 px-3">
+  const closeMobileSidebar = () => {
+    const closeBtn = document.querySelector("#mobileSidebar .btn-close");
+    closeBtn?.click();
+  };
+
+  const links = [
+    { to: "/Home", text: "HOME" },
+    { to: "/About", text: "ABOUT" },
+    { to: "/Skills", text: "SKILLS" },
+    { to: "/Experience", text: "EXPERIENCE" },
+    { to: "/Work", text: "WORK" },
+  ];
+
+  const renderLinks = (isMobile = false) =>
+    links.map((link) => (
+      <NavLink
+        key={link.to}
+        to={link.to}
+        className="nav-link text-uppercase"
+        onClick={isMobile ? closeMobileSidebar : undefined}
+      >
+        {link.text}
+      </NavLink>
+    ));
+
+  const sidebarContent = (isMobile = false) => (
+    <aside className="sidebar text-center py-5 px-3 bg-transparent">
       <img
         src={profileImg}
         alt="Jackson Ford"
@@ -21,26 +46,21 @@ export const Sidebar = () => {
       </p>
 
       <nav className="nav flex-column align-items-center gap-2">
-        <NavLink className="nav-link text-uppercase text-dark py-2" to="/Home" >HOME</NavLink>
-        <NavLink className="nav-link text-uppercase text-dark py-2" to="/About" >ABOUT</NavLink>
-        <NavLink className="nav-link text-uppercase text-dark py-2" to="/Skills" >SKILLS</NavLink>
-        <NavLink className="nav-link text-uppercase text-dark py-2" to="/Experience" >EXPERIENCE</NavLink>
-        <NavLink className="nav-link text-uppercase text-dark py-2" to="/Work" >WORK</NavLink>
+        {renderLinks(isMobile)}
       </nav>
     </aside>
   );
 
   return (
     <>
-      <div className="d-none vh-100 d-lg-block bgcolor">
-        {sidebarContent}
-      </div>
+      <div className="d-none d-lg-block">{sidebarContent(false)}</div>
 
       <button
-        className="btn btn-outline-secondary position-fixed top-0 end-0 m-3 d-lg-none z-3"
+        className="btn btn-light position-fixed top-0 end-0 m-3 d-lg-none z-3"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#mobileSidebar"
+        aria-controls="mobileSidebar"
       >
         <i className="fa-solid fa-bars"></i>
       </button>
@@ -50,16 +70,15 @@ export const Sidebar = () => {
         tabIndex="-1"
         id="mobileSidebar"
       >
-        <div className="offcanvas-header">
-          <button
-            type="button"
-            className="btn-close ms-auto bg-secondary"
-            data-bs-dismiss="offcanvas"
-          ></button>
-        </div>
+        <button
+          type="button"
+          className="btn-close d-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
 
         <div className="offcanvas-body p-0">
-          {sidebarContent}
+          {sidebarContent(true)}
         </div>
       </div>
     </>
