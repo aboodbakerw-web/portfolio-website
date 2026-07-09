@@ -1,6 +1,6 @@
 # 🌐 Portfolio Website
 
-A modern and responsive personal portfolio website built with **React.js**, **Bootstrap**, and **Vite**.
+A modern and responsive personal portfolio website built with **React.js**, **Bootstrap**, and **Vite**. This project showcases my frontend development skills, personal projects, and experience through a clean, interactive, and user-friendly interface.
 
 ## 🚀 Technologies Used
 
@@ -13,11 +13,12 @@ A modern and responsive personal portfolio website built with **React.js**, **Bo
 
 ## ✨ Features
 
-- Responsive design for all devices
+- Fully responsive design
 - Modern and clean user interface
 - Reusable React components
-- Fast performance with Vite
-- Well-organized project structure
+- Smooth navigation
+- Optimized performance with Vite
+- Well-structured and maintainable code
 
 ## 📂 Project Structure
 
@@ -26,17 +27,17 @@ src/
 public/
 ```
 
-## 📸 Preview
+## 📸 About the Project
 
-This portfolio showcases my frontend development skills, projects, and experience through a clean and responsive interface.
+This portfolio highlights my skills, projects, and experience as a Frontend Developer. It reflects my passion for creating responsive, modern, and user-friendly web applications.
 
 ## 👨‍💻 Author
 
 **Abdullah Baker**
 
 - GitHub: https://github.com/aboodbakerw-web
-- LinkedIn:www.linkedin.com/in/abdullah-baker-zourob-608396395
+- LinkedIn: https://www.linkedin.com/in/abdullah-baker-zourob-608396395
 
 ---
 
-⭐ If you like this project, don't forget to give it a star!
+⭐ If you found this project interesting, feel free to give it a star and connect with me on LinkedIn!
