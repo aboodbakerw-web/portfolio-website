@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import work1 from "../../assets/images/work7.jpg";
 import work2 from "../../assets/images/work8.jpg";
 import work3 from "../../assets/images/work12.jpg";
-import work4 from "../../assets/images/work11.jpg";
+import work4 from "../../assets/images/Work11.jpg";
 import work5 from "../../assets/images/work9.jpg";
 import work6 from "../../assets/images/work10.jpg";
 
