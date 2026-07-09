@@ -9,7 +9,7 @@ export const Sidebar = () => {
   };
 
   const links = [
-    { to: "/Home", text: "HOME" },
+    { to: "/", text: "HOME" },
     { to: "/About", text: "ABOUT" },
     { to: "/Skills", text: "SKILLS" },
     { to: "/Experience", text: "EXPERIENCE" },
@@ -18,14 +18,17 @@ export const Sidebar = () => {
 
   const renderLinks = (isMobile = false) =>
     links.map((link) => (
-      <NavLink
-        key={link.to}
-        to={link.to}
-        className="nav-link text-uppercase"
-        onClick={isMobile ? closeMobileSidebar : undefined}
-      >
-        {link.text}
-      </NavLink>
+     <NavLink
+  key={link.to}
+  to={link.to}
+  end={link.to === "/"}
+  className={({ isActive }) =>
+    `nav-link text-uppercase ${isActive ? "active" : ""}`
+  }
+  onClick={isMobile ? closeMobileSidebar : undefined}
+>
+  {link.text}
+</NavLink>
     ));
 
   const sidebarContent = (isMobile = false) => (
